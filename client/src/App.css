@@ -1,0 +1,95 @@
+#root {
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  margin: 10px;
+}
+
+#showImages {
+  display: flex;
+  justify-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: row;
+}
+
+video {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-height: 100vh;
+  object-fit: fill;
+}
+
+.card-frame {
+  width: 75vw;
+  margin: auto;
+  margin-top: 20vh;
+  padding: 5%;
+}
+
+
+.frame {
+  height: 75vh;
+}
+.w-65vw {
+  width: 65vw;
+}
+.w-40vw {
+  width: 40vw;
+}
+
+.w-30vw {
+  width: 30vw;
+}
+
+.w-300px {
+  width: 300px;
+}
+
+.w-40px {
+  width: 40px;
+}
+
+.h-30px {
+  height: 30px;
+}
+
+.h-50px {
+  height: 50px;
+}
+
+.h-85vh {
+  height: 85vh;
+}
+.fs-small {
+  font-size: small;
+}
+
+.clear-left {
+  clear: left;
+}
+.fs-5vw{
+  font-size: 5vw;
+}
+.fs-20vw {
+  font-size: 20vw;
+}
+
+.ts-black {
+  text-shadow: 1px -5px 13px black;
+}
+.ts-white{
+  text-shadow: 4px -7px 16px white;
+}
+
+.claer-right {
+  clear: right;
+}
+
