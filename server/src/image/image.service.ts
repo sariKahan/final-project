@@ -28,7 +28,6 @@ export class ImageService {
   }
 
   async findAll(idUser: number): Promise<Image[]> {
-    // return this.imageRepository.find(user);
     const images: Image[] = await this.imageRepository
       .createQueryBuilder('image')
       .leftJoinAndSelect('image.category', 'category')
@@ -52,7 +51,7 @@ export class ImageService {
     if (find)
       throw new BadRequestException(`the image name already exists`);
     if (await this.validCategoriesAndPersonsInImage(user, image)) {
-      image.idimage = id;
+       image.idimage = id;
       return await this.imageRepository.save(image);
     }
 

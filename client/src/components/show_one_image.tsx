@@ -13,7 +13,6 @@ export const ShowOneImage = (props: any) => {
     const [isBig, setIsBig] = useState(false);
     const navigate = useNavigate();
 
-    // {image.image_url}
     return <div onMouseOver={() => { setIsShowOption(true); }} onMouseLeave={() => setIsShowOption(false)}>
         <img onMouseOver={(event) => (event.target as any).classList.add('opacity-75')}
             onMouseLeave={(event) => (event.target as any).classList.remove('opacity-75')}

@@ -18,8 +18,6 @@ export const AddCategory = () => {
 
     return <div>
         <h3>add category</h3>
-        {/* <form onSubmit={addCategory}><DetailsCategory category={{category_description:""}}></DetailsCategory></form> */}
-
         <form id="newCategory" onSubmit={(event) => addCategoryOnclick(event)}>
             <div className="form-floating mb-3 mt-3 ">
                 <input type="text" className="form-control" placeholder="enter new category" value={newCategoryDiscription} required name="category_description" onChange={(e) => setNewCategoryDiscription(e.target.value)} />

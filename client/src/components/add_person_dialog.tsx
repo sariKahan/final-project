@@ -46,7 +46,7 @@ function BootstrapDialogTitle(props: DialogTitleProps) {
     );
 }
 
-export const AddPersonDialog = (props: any) => {
+export const AddPersonDialog = () => {
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -62,14 +62,6 @@ export const AddPersonDialog = (props: any) => {
             <div className="card card-body" onClick={handleClickOpen}>
                 <h5 className="card-title text-primary">other person</h5>
             </div>
-            {/* <div className="card " >
-        <div className="card-body d-flex justify-content-between">
-            <h5 className="card-title">{person.person_name}</h5>
-            <div className="d-flex align-items-start">
-                <button title="edit" type="button" className="btn btn-light" onClick={() => { setIsShowUpdate(!isShowUpdate); }}><i className="bi bi-pencil-square"></i></button>
-                <div className=""><DeletePerson setPeople={props.setPeople} personsControlMap={props.personsControlMap} id={person.idperson} /></div>
-            </div>
-        </div> */}
             <BootstrapDialog
                 scroll="body"
                 onClose={handleClose}

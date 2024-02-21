@@ -38,7 +38,6 @@ export const AddImages = () => {
 
             };
             dispatch(addImageAPI(image) as unknown as AnyAction);
-            alert("add image")
         }
     }
     return <div>
@@ -49,10 +48,17 @@ export const AddImages = () => {
                 <SelectAllCategories category={category} setCategory={setCategory} />
                 <CheckboxPersons setPeople={setPeople} />
             </div>
-            <div className="overflow-y-auto col frame d-flex justify-content-evenly align-items-center flex-wrap align-content-stretch flex-row">
-                {imgFiles[0] && Array.from(imgFiles)?.map((imgFile: any) => <img key={imgFile} src={URL.createObjectURL(imgFile)}></img>)}
-            </div>
+             <div id="frame" data-bs-spy="scroll" className=" col frame d-flex justify-content-evenly align-items-center flex-wrap align-content-stretch flex-row overflow-y-auto">
+                    {imgFiles[0] ?
+                        Array.from(imgFiles)?.map((imgFile: any) => <img key={imgFile} src={URL.createObjectURL(imgFile)} />
+                        ) : <i className="bi bi-file-earmark-image text-white  fs-20vw"></i>}
+
+                </div >
         </div>
+
+       
+
+
         <input onClick={async (event) => addImages(event)} type="button" className="btn btn-light mx-auto w-65vw" value="submit" />
     </div>
 }

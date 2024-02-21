@@ -18,14 +18,7 @@ export class PersonService {
     if (find) {
       throw new BadRequestException("The person name already exists");
     }
-    //TODO
-    person.person_date_of_birth = new Date(person.person_date_of_birth);
     person.user = user;
-    //If the date is not strong- throw error
-    if (!this.hasDatePassed(person.person_date_of_birth)) {
-      throw new BadRequestException("One of the data is wrong");
-    }
-
     return this.personRepository.save(person);
   }
 
@@ -57,8 +50,4 @@ export class PersonService {
     return await this.personRepository.delete({ user: user, idperson: id });
   }
 
-  hasDatePassed(date: Date): boolean {
-    const today = new Date();
-    return date <= today;
-  }
 }

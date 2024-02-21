@@ -3,8 +3,8 @@ import { UpdatePerson } from "./update_person";
 import { useState } from "react";
 
 export const PersonDetails = (props: any) => {
+    
     const person = props.person;
-    const dateOfBirth = new Date(person.person_date_of_birth);
     const [isShowUpdate, setIsShowUpdate] = useState(person.isShowUpdate);
 
 

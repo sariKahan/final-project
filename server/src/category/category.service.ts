@@ -5,7 +5,6 @@ import { Any, Repository } from 'typeorm';
 import { Category } from './entities/category.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/user/entities/user.entity';
-import { log } from 'console';
 
 @Injectable()
 export class CategoryService {
@@ -28,7 +27,6 @@ export class CategoryService {
 
   async findAll(user: User) {
       return await this.categoryRepository.findBy({user:user});
-    // return await this.categoryRepository.query("select * from photo.category where category_iduser = " + userId);
   }
 
   async findOne(user: User, id: number) {

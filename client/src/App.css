@@ -48,7 +48,9 @@ video {
 .w-30vw {
   width: 30vw;
 }
-
+.w-20vw {
+  width: 30vw;
+}
 .w-300px {
   width: 300px;
 }

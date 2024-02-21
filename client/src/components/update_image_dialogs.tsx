@@ -9,7 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { updateCategoryAPI } from '../api/category.api';
 import { AnyAction } from '@reduxjs/toolkit';
 import { UpdateImage } from './update_image';
 import { updateImageAPI } from '../api/image.api';

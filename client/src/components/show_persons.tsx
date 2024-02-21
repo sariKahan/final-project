@@ -5,7 +5,6 @@ export const ShowPersons: React.FC = () => {
     const persons: Person[] = useSelector((state: any) => {
         return state.personSlice.persons;
     })
-
     return <div>
         <h3>all your people</h3>
         {persons?.map((p: Person) =>

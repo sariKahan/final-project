@@ -11,16 +11,9 @@ export class Person {
   @Column()
   person_name: string;
 
-  @Column({ type: 'date' })
-  person_date_of_birth: Date;
-
   @ManyToOne(type=> User, user=>user.persons, { onDelete: 'CASCADE' })
   user: User;
 
   @ManyToMany(() => Image, (image) => image._, { onDelete: 'CASCADE' })
   images: Image[]
-
-  // @DeleteDateColumn()
-  // deletedAt?: Date;
-
 }

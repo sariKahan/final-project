@@ -20,8 +20,7 @@ export const CheckboxPersons = (props: any) => {
     }, 0)
 
     const onChangePersonCheckbox = (e: React.ChangeEvent<HTMLInputElement>, person: Person) => {
-        if (e.target.checked){
-            person.person_date_of_birth = new Date(person.person_date_of_birth as Date)
+        if (e.target.checked) {
             personsControlMap.set(person.idperson || 0, person);
         }
         else
@@ -30,7 +29,7 @@ export const CheckboxPersons = (props: any) => {
     }
 
     return <div className="w-100">
-        <label className="fs-5 float-start mb-1">select people:</label><br/>
+        <label className="fs-5 float-start mb-1">select people:</label><br />
         <p className="clear-left float-start fs-small mb-1">The photos that will be uploaded now will be saved for each person you choose.</p>
         <div className="btn-group flex-wrap w-100 mw-50" role="group" aria-label="Basic checkbox toggle button group">
             <div className="w-100">
@@ -41,9 +40,9 @@ export const CheckboxPersons = (props: any) => {
                             <PersonDetails setPeople={props.setPeople} personsControlMap={personsControlMap} person={p} ></PersonDetails>
                         </label>
                     </div>)}
-                        <div className="btn btn-outline-primary w-100">
-                           <AddPersonDialog/>
-                        </div>
+                <div className="btn btn-outline-primary w-100">
+                    <AddPersonDialog />
+                </div>
             </div>
         </div></div>
 }

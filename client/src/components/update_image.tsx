@@ -1,31 +1,8 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
 import { SelectAllCategories } from './select_all_categories';
 import { CheckboxPersons } from './checkbox_persons';
-import { updateImageAPI } from '../api/image.api';
-import { AnyAction } from '@reduxjs/toolkit';
 
 export const UpdateImage = (props: any) => {
-  // const [newName, setNewName]: any[] = useState(img.image_name);
-  // const [category, setCategory] = useState(img.category);
-  // const [people, setPeople] = useState(img._);
-  // const dispatch = useDispatch()
-
-  // const updateImage = () => {
-  //   const image: Image = {
-  //     image_name: newName,
-  //     image_creation_date: img.image_creation_date,
-  //     image_url: img.image_url,
-  //     category: category,
-  //     _: people
-  //   }
-  //   const obj = {
-  //     id: img.idimage || 0,
-  //     image: image
-  //   }
-  //   dispatch(updateImageAPI(obj) as unknown as AnyAction)
-
-  // }
+ 
   return <div>
     <div className="row">
       <div className="col d-flex align-items-center flex-wrap align-content-stretch flex-row">
@@ -40,7 +17,6 @@ export const UpdateImage = (props: any) => {
         <img src={props.img.image_url}></img>
       </div>
     </div>
-    {/* <input onClick={() => updateImage()} type="button" className="btn btn-light mx-auto w-65vw" value="submit" /> */}
   </div>
 
 

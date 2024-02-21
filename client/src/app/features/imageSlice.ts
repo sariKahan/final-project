@@ -34,7 +34,6 @@ const imagesSlice = createSlice({
                 imagesSlice.caseReducers.filter(state,action);
             })
             .addCase(getAllImagesAPI.rejected, (state, action) => {
-                console.log(action.error.name)
                 alert(action.error.message);
             })
             .addCase(addImageAPI.fulfilled, (state, action) => {

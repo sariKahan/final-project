@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux"
 import { deletePersonAPI } from "../api/person.api";
 import { AnyAction } from "@reduxjs/toolkit";
 import { getAllImagesAPI } from "../api/image.api";
-// import { deletePerson } from "../app/features/personSlice";
 
 export const DeletePerson = (props: any) => {
     const dispatch = useDispatch();
